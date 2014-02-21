@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+ margin : 0;
+ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+ font-size: large;
+ background: white;
+ color: black;
+ overflow-x :   hidden;
+
+}
+
+ a:hover {
+         color:#FF00FF;
+         font-weight : bold;
+
+} 
+h1,h2,h3 {
+ margin: 0;
+ padding: 0;
+}
+
+ul,li {
+ margin :0;
+ padding : 0;
+ list-style: none;
+}
+
+.login {
+ float : right;

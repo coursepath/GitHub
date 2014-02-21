@@ -1,0 +1,33 @@
+<html>
+<select name="select1" id="category">
+    <option value="0">None</option>
+    <option value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+    <option value="4">Fourth</option>
+</select>
+
+<select name="items" id="select2">
+
+    <option value="3" label="1">Smartphone</option>
+    <option value="8" label="1">Charger</option>
+
+    <option value="1" label="2">Basketball</option>
+    <option value="4" label="2">Volleyball</option>
+</select>
+				
+<Script type="text/javascript">
+	
+$("#category").change(function() { 
+if($(this).data('options') == undefined){
+    /*Taking an array of all options-2 and kind of embedding it on the select1*/
+    $(this).data('options',$('#select2 option').clone());
+    } 
+var id = $(this).val();
+var options = $(this).data('options').filter('[label=' + id + ']');
+$('#select2').html(options);
+   // alert(options);
+});
+
+</script>
+</html>

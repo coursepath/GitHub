@@ -1,0 +1,66 @@
+<?php
+					// array for what_am_i_liste with $key as key and $course as the value in the array
+				$course_list = array('1'=>'Primary Education','Secondary Education','UG','PG','Diploma','Research');
+					include 'experiments\function1.php';
+				
+	
+/**/
+					
+				
+			
+					//lets make a drop down menu for what_am_i with $course_list value be key and value
+					
+					echo'<form action="index.php" method="get">';
+					echo'<select name="course">';
+					echo'<option value=" " selected="selected">Select a Category </option>';
+							foreach($course_list as $key=>$course){
+							echo"\n<option value=".$key."selected=\"selected\">".$course. "</option>";
+							}
+								echo'</select>'; //close select tag
+								echo'</form>';
+							?>
+							<?php
+								
+					if (function_exists('dropdown')){				
+  	echo 'yes';
+	}
+	?>
+		<?php						
+										
+					
+			
+		/*	function subject_dropdown(){
+						
+						echo'<form action="index.php" method="get">';
+						echo'<select name="subject">';
+							foreach($school_ed as $key1=>$subject){
+							echo'\n<option value='."$key1".'>$subject</option>';
+							}
+					echo'</select>'; //close select tag
+					
+								}	
+				
+						
+					//echo'</select>'; //close select tag
+					//echo'</form>';*/
+					
+					if($_SERVER['REQUEST_METHOD']='GET'){
+						$option_selected = isset($_GET[$key]);
+							for($option_selected){
+								if ($option_selected == 2){	
+
+								echo second_dropdown();								
+						
+							}
+						else{
+									echo'yes';									
+										}							
+								}
+								else{
+								echo'could not connect to database';
+							}
+								
+					echo'</form>';	
+						
+														
+					?>					

@@ -1,0 +1,49 @@
+	<?php ob_start();
+	?>
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+	<title> <?php 
+		if (defined('TITLE'))
+	{print TITLE;
+	}else{
+	print 'Srikanth Nallan Chakravarthi';
+	}
+	?>
+	</title>
+	<meta http-equiv="content-type" content="text/html charset=utf-8" />
+	<link rel="stylesheet" href="css/1.css" type="text/html" media="screen,handheld,projection" />
+	</head>
+	<body>
+	<div id="wrapper">
+			<div id="header">
+					<span id="banner"><img src="images\banner.jpg" /></div>
+					<!--<span class="description">Mckenzie Certified Physical Therapist</span> -->
+								<h1><a href="index.php">Srikanth Nallan Chakravarthi</a></h1>
+								<span  style= "font-size:9pt; float: right;"><?php date_default_timezone_set('America/New_York');			
+			print date('M jS D  g:ia '); 
+			?></span>						
+			<!--<span  style= "font-size:9pt; float: right;"><?php// if(!empty($_SESSION['email'])){ print $_POST['email'];}
+			?></span>entry tested to make the email appear in every web page after logged in-->
+									<ul id="nav">
+											<li><a href="index.php">Home</a></li>
+											<li><a href="books.php">Books</a></li>
+											<li><a href="#">Hobbies</a></li>
+											<li><a href="login.php">Login</a></li>
+											<li><a href="register.php">Register</a></li>
+									</ul>
+			</div><!--Header -->
+
+			<div id="sidebar"><!--Side Bar Starts here -->
+						<h2> Patient Testimonials </h2>
+				<p class="news"> .He completely cured my husband's back problem and avoided big and expensive surgery<br />- <em> Caroline Stern &nbsp</em>(Big Rapids Resident)</p>
+				<p class="news">He is a magical healer.He saved me from big surgery.<br />
+				<em> abc</em></p>
+				
+		
+		</div ><!--Sidebar ends here -->
+		<div id="content"><!-- Begin Changeable Content -->
+	</body>
+	</html>
